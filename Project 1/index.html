@@ -1,0 +1,114 @@
+<!-- 
+Name: William Grate
+Date: 09/16/22
+-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Project 1: Intro to JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header><h1>Intro to JavaScript</h1></header>
+            <main>
+                <p>
+                    You may have a few questions about what JavaScript is, but I'm here to explain a few things! 
+                </p>
+                <p>
+                    But first off...
+                </p>
+                <section>
+                    <h2>What is the purpose of JavaScript?</h2>
+                    <p>JavaScript was initially created to "make web pages come alive", it does this by giving programmers a variety of new abilities. JavaScript is able to add new HTML to a web page, modify existing content and even edit styles! JavaScript can also react to user input, like mouse clicks, key presses, and moving the mouse.</p>
+                </section>
+                <section>
+                    <h2>Who invented JavaScript and when?</h2>
+                    <p>JavaScript was developed by Netscape in 1995, and was originally called "LiveScript", but due to the popularity of Java at the time, it was changed to JavaScript likely as a marketing ploy.</p>
+                </section>
+                <section>
+                    <h2>What software program will you be using to write JavaScript?</h2>
+                    <p>I will be using <a href="https://code.visualstudio.com/">Visual Studio Code</a> to be writing all of my HTML, CSS, and JS code! It's my preferred IDE (Integrated Development Environment) for all languages other than Python, which I use the Community Edition of <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> for.</p>
+                </section>
+                <section>
+                    <h2>What software program will you be using to run JavaScript?</h2>
+                    <p>JavaScript runs in the browser, of which I use <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>.</p>
+                </section>
+                <section>
+                    <h2>Why are external scripts preferable to scripts added directly within an HTML file?</h2>
+                    <p>External scripts are preferred to scripts embedded into the HTML themselves for a few reasons, caching being the most important. Caching allows fewer bytes to be sent between the server and the client, which results in better performance. Modularity is another big plus as it allows you to use the same functions for multiple web pages.</p>
+                </section>
+                <section>
+                    <h2>Hold On, I Have Some Other Questions for This Assignment!</h2>
+                    <h3>What's the point of all those console.log() statements?</h3>
+                    <p>The console.log statements are used to evaluate the expression contained within the parenthesis. For example, "console.log(true + false)" logs "1" to the console, this is because boolean values are either 1 or 0, true or false. So when adding them, the console.log statement will log the result of 1 + 0.</p>
+                    <h3>What's the difference between how you reference a variable versus a string in a JavaScript statement?</h3>
+                    <p>To reference a string in a JavaScript statement, you include text within either single (') or double (") quotes. To reference a variable in a statement, you can use backticks to surround text, and then embrace the variable name in curly brackets ({}), preceded by a dollar sign ($).</p>
+                    <p>
+                        Here's an example:
+                    </p>
+                    <pre>
+                        <code>
+                            console.log("This is a piece of text"); // Writes 'This is a piece of text' to the console
+                            // For the next example, we'll need a variable to use, so lets use 'x'.
+                            let x = 1;
+                            // This defines the variable 'x' to the integer value of 1.
+                            console.log(`x is equal to ${x}`);
+                            // This writes 'x is equal to 1' to the console
+                            // If we change the value of x, this message would change as well!
+                        </code>
+                    </pre>
+                    <h3>What's the difference between a single value and an expression in a JavaScript statement?</h3>
+                    <p></p>
+                </section>
+            </main>
+        </div>
+        <script>
+            "use strict"; //Step 3
+            alert("Hi World!"); // Step 1
+            console.log("Hi Insert Your Name"); //Step 2
+        </script>
+        <script>
+            "use strict"; // Step 3
+            let myName = "William"; // Step 4
+            var mySalary = 100_000_000; // Step 4
+            console.log("My name is " + myName + " and my salary is " + mySalary); // Step 4
+            // console.log(`My name is ${myName} and my salary is ${mySalary}`); // Alt version
+            mySalary = 150_000; // Step 5
+            console.log("My name is " + myName + " and my salary is " + mySalary); // Step 5
+            // console.log(`My name is ${myName} and my salary is ${mySalary}`); // Alt version
+            let veteran = false; // Step 6
+            console.log(typeof(myName)); // Step 7
+            console.log(typeof(mySalary)); // Step 7
+            console.log(typeof(veteran)); // Step 7
+            
+            // Step 8 Below
+            console.log("" + 1 + 0);
+            console.log("" - 1 + 0);
+            console.log(true + false);
+            console.log(6 / "3");
+            console.log("2" * "3");
+            console.log(4 + 5 + "px");
+            console.log("$" + 4 + 5);
+            console.log("4" - 2);
+            console.log("4px" - 2);
+            console.log(7 / 0);
+            console.log("  -9  " + 5);
+            console.log("  -9  " - 5);
+            console.log(null + 1);
+            console.log(undefined + 1);
+
+            // Step 9 Below
+            let x = 5;
+            let y = 1 + (x *= 2);
+            console.log(x);
+            console.log(y);
+
+            // x is originally assigned to 5, and in the next line, is multiplied by 2 and assigned to the resulting value, 10.
+            // y is assigned to the equation 1 + 2x (simplified here). Following the Order of Operations, 2x is evaluated first and results in 10, and then 1 is added, resulting in y being assigned to 11.
+        </script>
+    </body>
+</html>
