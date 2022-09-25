@@ -1,0 +1,82 @@
+<!-- 
+Name: William Grate
+Date: 09/25/22
+-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Project 2: Connecting JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- <div id="wrapper"> -->
+            <header><h1>Connecting JavaScript to the content in a web page, using the DOM</h1></header>
+            <main>
+                <p>This page covers the questions and answers to our second project.</p>
+                <section>
+                    <h2>At the end of the Browser environment lesson, the author makes this comment "Now we'll get down to learning DOM, because the document plays the central role in the UI."</h2>
+                    <p></p>
+                </section>
+                <section>
+                    <h2>What specification documents does the author recommend (include the link and the description of the specification in your answer.)</h2>
+                    <p></p>
+                </section>
+                <section>
+                    <h2>Other Questions!</h2>
+                    <h3>What is the document? (Choose from the following -- object, method, property)</h3>
+                    <p>The <code>document</code> is an object, and is the main "entry point" to the page.</p>
+
+                    <h3>What operator do you use to access the methods and properties of an object?</h3>
+                    <p>You can access the properties and methods of an object by the name of the object, followed by a period, and then the name of the method or object. Also remember that if you wish to call a method, you must include the parenthesis afterwards.</p>
+                        <pre><code>
+                            const person = {
+                                first: "John";
+                                last: "Smith";
+                                full_name: function () { return this.first + " " + this.last; };
+                            };
+                            person.first;       // "John"
+                            person.last;        // "Smith"
+                            person.full_name(); // "John Smith"
+                        </code></pre>
+                </section>
+                <section>
+                    <h3>What characters always follow a method?</h3>
+                    <p>Parenthesis must always follow a method. That includes when calling a method as well, which you can see in the example above.</p>
+
+                    <h3>What, in general, does a method of an object do?</h3>
+                    <p>Generally, a method does something. A method is an action that an object can perform. Imagine that an object contains a table of data, that object may have an <code>add</code> method, which would allow a user to add new data to the table.</p>
+
+                    <h3>What, in general, does a property of an object do?</h3>
+                    <p>While methods typically "do something", properties instead contain information. It may be the color of something, the name, an id, etc.</p>
+                </section>
+            </main>
+        <!-- </div> End of Wrapper Div -->
+        <script>
+            // // Excercise 1
+            // for (let i = 0; i < document.body.childNodes.length; i++) { // Loops over all elements in the document, and increments the value of i by one so long as the length of the current node is greater than i. If i is greater than the length of the string, the loop stops.
+            //     console.log( document.body.childNodes[i] );             // Logs the current node to the console
+            // }
+            
+            // for (let node of document.body.childNodes) {              // Loops over all nodes in the document
+            //     console.log(node);                                    // Logs the current node to the console
+            // }
+            
+            // Excercise 2
+            console.log(document.body.parentNode);
+            console.log(document.body.childNodes);
+            console.log(document.body.firstChild);
+            console.log(document.body.lastChild);
+            console.log(document.body.previousSibling);
+            console.log(document.body.nextSibling);
+            console.log(document.body.parentElement);
+            console.log(document.body.children);
+            console.log(document.body.firstElementChild);
+            console.log(document.body.lastElementChild);
+            console.log(document.body.previousElementSibling);
+            console.log(document.body.nextElementSibling);
+            </script>
+    </body>
+</html>
