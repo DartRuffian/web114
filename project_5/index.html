@@ -44,8 +44,8 @@ Date: 09/25/22
 
             if (age >= 18 && proceed)
                 {
-                    let age = prompt("What is your name?", "");
-                    isLegal.textContent = `${name} is legal`;
+                    let name = prompt("What is your name?", "");
+                    isLegal.textContent = `${name} is legal.`;
                 };
 
             // Excercise 2
@@ -81,7 +81,7 @@ Date: 09/25/22
             // while (true)
             //     {
             //         let guess = prompt("Guess a number from 1-10.");
-            //         if (guess === secret)
+            //         if (guess == secret)
             //             {
             //                 alert("You guessed it!");
             //                 break;
@@ -92,7 +92,7 @@ Date: 09/25/22
             do 
                 {
                     let guess = prompt("Guess a number from 1-10.");
-                    if (guess === secret)
+                    if (guess == secret)
                         {
                             alert("You guessed it!");
                             break;
@@ -102,7 +102,7 @@ Date: 09/25/22
             // Exercise 5
             for (let i = 0; i <= 31; i++) 
                 {
-                    if (i % 3 === 0)
+                    if (i % 3 == 0)
                         {
                             console.log(i);
                         }
@@ -137,19 +137,19 @@ Date: 09/25/22
             var sortingHat2 = function()
                 {
                     let house2 = prompt("What is your Harry Potter house?", "");
-                    if (house === "Gryffindor")
+                    if (house2 == "Gryffindor")
                         {
                             console.log(`You are a ${house2}`);
                         }
-                    else if (house === "Slytherin")
+                    else if (house == "Slytherin")
                         {
                             console.log(`You are a ${house2}`);
                         }
-                    else if (house === "Ravenclaw")
+                    else if (house == "Ravenclaw")
                         {
                             console.log(`You are a ${house2}`);
                         }
-                    else if (house === "Hufflepuff")
+                    else if (house == "Hufflepuff")
                         {
                             console.log(`You are a ${house2}`);
                         }
