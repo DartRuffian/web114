@@ -1,0 +1,39 @@
+<!-- 
+Name: William Grate
+Date: 10/22/22
+-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Project 6: Midterm Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header><h1>Project 6: Midterm Calculator</h1></header>
+            <main>
+                <p>Enter your two numbers below and choose a operation, the calculator will handle the rest for you!</p>
+                <input id="numOne" type="number" ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57" required/>
+                
+                <select id="operator">
+                    <option value="add">plus</option>
+                    <option value="subtract">minus</option>
+                    <option value="multiply">multiplied by</option>
+                    <option value="divide">divided by</option>
+                    <option value="modulus">modulus</option>
+                    <option value="power">to the power of</option>
+                </select>
+
+                <input id="numTwo" type="number" ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57" required/>
+                <label>is</label>
+                <label id="result">0</label>
+                <p></p> <!-- Line break -->
+                <button type="submit" value="Submit" onclick="solve()">Solve!</button>
+            </main>
+        </div>
+        <script src="scripts/math.js"></script>
+    </body>
+</html>

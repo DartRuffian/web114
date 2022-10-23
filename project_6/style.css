@@ -1,0 +1,105 @@
+/* 
+Name: William Grate
+Date: 10/22/22
+*/
+
+body
+    {
+        background: #EAEAEA;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+header
+    {
+        color: #FFFFFF;
+        background-color: #4C5355;
+        text-align: center;
+    }
+
+h1
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0.05em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+h2
+    {
+        color: #607D86;
+        font-family: Georgia, "Times New Roman", serif;
+        text-shadow: 1px 1px #CCCCCC;
+    }
+
+h3
+    {
+        color: #607D86;
+        font-family: Georgia, "Times New Roman", serif;
+    }
+
+section p
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-style: italic; */
+        margin-left: 2em;
+    }
+
+a
+    {
+        color: #C44B4F;
+    }
+
+li
+    {
+        margin: 0.5em;
+    }
+
+code
+    {
+        font-family: monospace;
+        font-size: inherit;
+        font-style: normal;
+    }
+  
+p > code, li > code, dd > code, td > code
+    {
+        background: #ffeff0;
+        word-wrap: break-word;
+        box-decoration-break: clone;
+        padding: .1rem .3rem .2rem;
+        border-radius: .2rem;
+    }
+
+input[type="button"]
+    {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+    }
+
+input[type="button"]:hover
+    {
+        background-color: #f44336;
+    }
+
+#wrapper
+    {
+        background-color: #90C7E3;
+        background: linear-gradient(0deg, #CBCDCB 0%, #FFFFFF 100%);
+        background-repeat: no-repeat;
+        width: 80%;
+        height: 80em;
+        border: 1px solid #4C5355;
+        margin: auto;
+        filter: drop-shadow(3px 3px 3px #4C5355);
+    }
