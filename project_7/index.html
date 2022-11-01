@@ -1,0 +1,250 @@
+<!-- 
+Name: William Grate
+Date: 10/29/22
+-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Project 7: Best Practices</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header><h1>Project 7: Best Practices, and Modifying Existing Functions</h1></header>
+            <main>
+                <section>
+                    <h2>Common JavaScript Styles</h2>
+                    <p>There are many widely used JavaScript styles, but one specific style is the AirBnB style, which can be found on <a href="https://github.com/airbnb/javascript">its GitHub page</a>. AirBnB is so commonly used because of its consistency, readability, and predictability. When using a style, not just for JavaScript but for any language, these are all very important aspects.</p>
+                </section>
+                <section>
+                    <h2>Identify three distinct "best practice" programming practices and explain how they create better code.</h2>
+                    <ol>
+                        <li>
+                            <h3>Use consistent indentation.</h3>
+                            <p>
+                                While this may sound like very obvious advice to those who are very experienced with programming, but still a very important point nonetheless.
+                                <br>
+                                Look at the block of pseudocode below.
+                            </p>
+                            <pre><code>
+                                WHILE i ≤ 4
+                                i = i + 1
+                                WRITE i
+                                y = i * 2
+                            </code></pre>
+                            <p>Without indenting, it is unclear what lines of code are included in the while loop or not.</p>
+                        </li>
+                        <li>
+                            <h3>Use Comments.</h3>
+                            <p>You may know what your code does when you're writing it; however, if you're working on a team of developers, some members may not to be able to understand it. Even if you are working by yourself, you may have to go back to older code to modify or fix code, and comments make understanding code much easier. Now, you don't need to have a comment for every single line of code, but for blocks of code, leave a comment or two describing what it does and how it does it.</p>
+                        </li>
+                        <li>
+                            <h3>Use Meaningful Names</h3>
+                            <p>For things like variables, functions, classes, etc. you'll want to use names that convey what they are used for. Single character names (in most cases) don't do this, names like <code>x</code>, <code>y</code>, don't always convey their meaning. These names can be used when it makes sense, such as keeping track of the posistion of something, for example, but in most cases, use a more meaningful name.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Identify three distinct sloppy programming practices and explain the problems they each create.</h2>
+                    <ol>
+                        <li>
+                            <h3>"I'll fix it later"</h3>
+                            <p>Delaying fixing a problem not only doesn't solve that specific problem, but is also typically represenative of a much larger problem. Where multiple fixes are pushed back to be fixed "later" and then forgotten.</p>
+                        </li>
+                        <li>
+                            <h3>Always Using One-Liner Solution</h3>
+                            <p>"One-Liners", blocks of complex code that can be reduce to one line of code, are clever; however, most of the time, they are unorganized and illegible to the everyone but the author. Take this Python One-Liner that uses the "Sieve of Eratosthenes" algorithm to find all prime numbers up to a given value: <code>lambda n: functools.reduce( (lambda r,x: r-set(range(x**2,n,x)) if (x in r) else r), range(2,int(n**0.5)), set(range(2,n)))</code>. To someone who is not familiar with this specific algorithm, or even Python itself, this looks like a garbled mess. Remember that code is <strong>executed</strong> by machines but <strong>read</strong> by humans. Focus on making your code readable, and then optimize.</p>
+                        </li>
+                        <li>
+                            <h3>You don't need to re-invent the wheel.</h3>
+                            <p>You don't always have to write your own implentation of a type of system. You don't need to re-invent the wheel when someone else has the blueprints to a car. This however, does not mean that you should just copy and paste code without thinking. Consider on if that system will work for you, or perhaps make changes to it to better fit your needs.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Explain the difference between a primitive, an array, and an object and include an example of each.</h2>
+                    <p>A "primitive" data type are the data types that JavaScript predefines for us to use. Types like <code>byte</code>, <code>int</code>, <code>boolean</code>, etc. are all primitive. Object data types however, are user-created. Such as classes or strings are object data types and therefore created by the user. Arrays are a special type of data that can hold multiple values, all neatly rolled into one. After all, why create three variables for a set of values, when you can have a single array that contains all three values.</p>
+                </section>
+                <section>
+                    <h2>Explain the phrase "Fractions divided by powers of 2 are exactly represented in the binary system" and what universal problem this is referring to in all programming languages.</h2>
+                    <p>In many, many languages, if you were to add <code>0.1</code> and <code>0.2</code>, you will not get <code>0.3</code> as you might expect, but instead get a much longer <code>0.30000000000000004</code>, but why is this? But first let's explain this in the way that we humans express numbers. We humans use "Base 10" for math, meaning there are 10 numbers from 0 to 9 that make up all of the numbers we use; and with Base 10, you can express all of the fractions finitely that are Prime Factors of 10. So fractions like <sup>1</sup>&frasl;<sub>2</sub>, <sup>1</sup>&frasl;<sub>4</sub>, <sup>1</sup>&frasl;<sub>5</sub>, <sup>1</sup>&frasl;<sub>8</sub>, and <sup>1</sup>&frasl;<sub>10</sub> are all very easily expressed using Base 10.</p>
+                    <p>What do we do about the fractions in-between though? How might we express <sup>1</sup>&frasl;<sub>3</sub> as a decimal? We could approximate and use 0.3, or we could get even closer and use 0.33, or even closer than that with 0.333, and so it goes on and on. Meaning that <sup>1</sup>&frasl;<sub>3</sub> <i>cannot</i> be expressed in Base 10.</p>
+                    <p>
+                        Computers do this in much the same way that humans do; however, they use a Base 2 system, also known as binary, to express numbers. So similar to how <sup>1</sup>&frasl;<sub>3</sub> is a repeating decimal in Base 10, so is <sup>1</sup>&frasl;<sub>10</sub>,<sup>1</sup>&frasl;<sub>5</sub>, etc. etc.
+                        <br>
+                        This is what leads to <code>0.1</code> and <code>0.2</code> adding to <code>0.30000000000000004</code>.
+                    </p>
+                </section>
+                <div id="excerciseStart">
+                    <h2>Excercises Section</h2>
+                    <form>
+                        <label for="num1">Enter a number:</label>
+                        <br>
+                        <input id="num1" type="number">
+                        <br>
+                        <label for="operator">Enter an operator (+, -, *, or /)</label>
+                        <br>
+                        <input id="operator">
+                        <br>
+                        <label for="num2">Enter a number:</label>
+                        <br>
+                        <input id="num2" type="number">
+                        <br>
+                        <input type="button" value="Calculate" onClick="solve()">
+                    </form>
+                </div>
+            </main>
+        </div>
+        <script>
+            // Excercise 1            
+            function solve()
+                {
+                    // Convert the form values of each input to ints
+                    num1 = parseInt(num1.value);
+                    num2 = parseInt(num2.value);
+                    switch (operator.value)
+                        {
+                            // Determine which operator is being used, and solve the expression based on the operator
+                            case "+":
+                                answer = num1 + num2;
+                                break;
+                            case "-":
+                                answer = num1 - num2;
+                                break;
+                            case "*":
+                                answer = num1 * num2;
+                                break;
+                            case "/":
+                                answer = num1 / num2;
+                                break;
+                            default:
+                                break;
+                        }
+                    // If answer is defined, print answer to console
+                    if (!answer === undefined) console.log(`${num1} ${operator.value} ${num2} = ${answer}`);
+                }
+
+
+            // Exercise 2
+            function getRandomInt(max)
+                {
+                    // Return a number between 0 and max
+                    return Math.floor(Math.random() * max);
+                }
+
+            var cheery = function()
+                {
+                    // Return a random message from messages
+                    let messages = ["Have a good day", "Pleasure meeting you", "You're fun to be with", "I'll see you soon", "Have a great night"];
+                    console.log(messages[getRandomInt(messages.length)]);
+                }
+            
+
+            // Exercise 3
+            function ucFirst(str)
+                {
+                    if (!str) return str; // end the function early if str is undefined
+                    return str[0].toUpperCase() + str.slice(1); // take the first index of str and make it uppercase, then add the rest of the string
+                }
+                // alert(ucFirst("john")); // John
+            
+
+            // Exercise 4
+            function checkSpam(str)
+                {
+                    let lowerStr = str.toLowerCase(); // Save a copy of the string that is all lowercase
+                    return lowerStr.includes('viagra') || lowerStr.includes('xxx'); // return true if the lowered string contains "viagra" or three x's in a row
+                }
+
+            // alert( checkSpam('buy ViAgRA now') ); // true
+            // alert( checkSpam('free xxxxx') ); // true
+            // alert( checkSpam("innocent rabbit") ); // false
+
+
+            // Exercise 5
+            function truncate(str, maxlength)
+                {
+                    return (str.length > maxlength) ? str.slice(0, maxlength - 1) + "…" : str; // Removed unneccessary newline character
+                    // (str.length > maxlength) checks if the given string is longer than the given max length, and returns one of two values based off that
+                    // if the string is longer than the max length, the string is sliced from index 0 to index 19 (the first through 20th characters) and then an ellipsis (...) is added to the end.
+                    // if the string is not longer than the max length, then the string is returned as is
+                }
+            
+            
+            // Exercise 6
+            function averageInput() 
+                {
+                    let numbers = [];
+                    while (true) 
+                        {
+                            let value = prompt("A number please? (Between 0 and 100, inclusive)", 0);
+
+                            // should we cancel?
+                            if (value === "" || value === null || !isFinite(value) || value < 0 || value > 100) break;
+
+                            numbers.push(+value);
+                        }
+
+                    let sum = 0;
+                    for (let number of numbers)
+                        {
+                            sum += number;
+                        }
+                    return sum / numbers.length; // return the average of the data set
+                }
+
+            alert( averageInput() );
+
+
+            // Exercise 7
+            let arr1 = [0, 1, 2, 5] 
+            let arr2 = [10, 20, 4, 1]
+
+            var addTwo = function(arr)
+                {
+                    let max = 0;
+                    let max2 = 0;
+
+                    for (let item of arr)
+                        {
+                            // for each item of arr
+                            if (item > max)
+                                {
+                                    // If the current item is greater than max, set max2 to the current max, and then max to the current item
+                                    // This leaves max as the greatest of the list for this iteration, and max 2 as the second greatest
+                                    max2 = max
+                                    max = item
+                                }
+                        }
+                    return max + max2
+                }
+            console.log(addTwo(arr1)); // 7
+            console.log(addTwo(arr2)); // 30
+
+
+            // Exercise 8
+            function sortByAge(arr)
+                {
+                    // arr.sort((a, b) => a.age - b.age); // Original arrow syntax
+                    arr.sort(function(a, b) {return a.age - b.age}); // Traditional syntax
+                }
+
+                // define users
+                let john = { name: "John", age: 25 };
+                let pete = { name: "Pete", age: 30 };
+                let mary = { name: "Mary", age: 28 };
+                
+                let arr = [ pete, john, mary ];
+
+                sortByAge(arr);
+                console.log(arr)
+                // now sorted is: [john, mary, pete]
+                // alert(arr[0].name); // John
+                // alert(arr[1].name); // Mary
+                // alert(arr[2].name); // Pete
+        </script>
+    </body>
+</html>
