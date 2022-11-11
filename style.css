@@ -1,6 +1,6 @@
 /* 
     Name: William Grate
-    Date: 11/5/22
+    Date: 11/8/22
 */
 
 /* Styling will be addded later in development. */
@@ -8,9 +8,185 @@
 /* 
     CSS Requirements
     "Write CSS to add a pleasing and responsive web site per the details below as well as the amount of time and effort you want to put into this."
-    Set the width of wrapper div to less than 100% and center the div.
-    All measurements should be flexible. (em and % or other responsive units of measure).
-    Images should be flexible. e.g. { max-width: 100% }, no height= or width= attributes in html. Incorporate at least two images in your game!
+    Set the width of wrapper div to less than 100% and center the div.  DONE
+    All measurements should be flexible. (em and % or other responsive units of measure).   DONE
+    Images should be flexible. e.g. { max-width: 100% }, no height= or width= attributes in html.   DONE
+    Incorporate at least two images in your game!   DONE
 
     At least 2 media queries for Tablets/Phones. Either mobile first or traditional first works.
 */
+
+/* 
+Colors
+3d5a80
+98c1d9
+e0fbfc
+ee6c4d
+293241
+*/
+
+/* General Styles */
+/* Headers */
+header
+    {
+        color: #FFFFFF;
+        background-color: #3d5a80;
+        text-align: center;
+    }
+
+h1
+    {
+        font-family: Georgia, "Times New Roman", serif;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+h2
+    {
+        color: #3d5a80;
+        font-family: Georgia, "Times New Roman", serif;
+        text-shadow: 1px 1px #CCCCCC;
+    }
+
+h3
+    {
+        color: #3d5a80;
+        font-family: Georgia, "Times New Roman", serif;
+    }
+
+h4
+    {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #3d5a80;
+        margin-bottom: 0.25em;
+    }
+
+/* Body and Main Elements */
+body
+    {
+        color: #696969;
+        background: #EAEAEA;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+main
+    {
+        margin: 1em;
+    }
+
+/* Forms */
+input[type="button"]
+    {
+        background-color: #98c1d9;
+        border: none;
+        color: white;
+        padding: 6px 10px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+input[type="button"]:hover
+    {
+        background-color: #ee6c4d;
+    }
+
+label
+    {
+        margin: 0em;
+        padding: 0em;
+    }
+
+img
+    {
+        max-width: 40%;
+        max-height: 10%;
+        border-radius: 5%;
+        filter: drop-shadow(3px 3px 3px #4C5355);
+        margin: auto;
+        display: block;
+    }
+
+
+/* Classes / IDs */
+/* Question-Related */
+.q_wrong
+    {
+        color: #ee3224;
+    }
+
+.q_correct
+    {
+        color: #5d9732;
+    }
+
+/* Other */
+#wrapper
+    {
+        /* Div that wraps around all content within <body> */
+        /* Background */
+        background-color: #FFFFFF;
+        background: linear-gradient(0deg, #e0fbfc 0%, #FFFFFF 100%);
+        background-repeat: no-repeat;
+    }
+
+/* Media Queries */
+/* Medium Displays */
+@media screen and (min-width: 600px)
+    {
+        form
+            {
+                margin-left: 1em;
+                margin-right: 1em;
+                flex: 1;
+            }
+        
+        input[type=radio]
+            {
+                float: left;
+            }
+            
+        label
+            {
+                display: block;
+            }
+        
+        form::after
+            {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+
+        .flow
+            {
+                display: flex;
+                flex-direction: row;
+            }
+        
+        .flow h3
+            {
+                text-align: center;
+            }
+    }
+
+/* Large Displays */
+@media screen and (min-width: 1024px)
+    {
+        #wrapper
+            {
+                /* Div that wraps around all content within <body> */
+                /* Center Div */
+                margin: auto;
+                width: 90%;
+                /* Background */
+                background: linear-gradient(0deg, #e0fbfc 0%, #FFFFFF 100%);
+                background-repeat: no-repeat;
+                
+                /* Border */
+                border: 1px solid #4C5355;
+                filter: drop-shadow(3px 3px 3px #4C5355);
+            }
+    }

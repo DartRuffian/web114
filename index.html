@@ -1,29 +1,137 @@
 <!-- 
     Name: William Grate
-    Date: 09/25/22
+    Date: 11/8/22
 -->
 
 <!-- 
     HTML Requirements
-    Create a well-formed, semantically correct html page. Include appropriate wireframe tags.
-    Include a div to wrap all content in the body.
-    Review the list of required items below, incorporating them into your JavaScript game.
-    meta viewport tag should be added. <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    Create a well-formed, semantically correct html page. Include appropriate wireframe tags.   DONE
+    Include a div to wrap all content in the body.  DONE
+    meta viewport tag should be added. <meta name="viewport" content="width=device-width, initial-scale=1.0">   DONE
 -->
 
 
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>WEB 114 Final</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div id="wrapper">
-            <header></header>
-            <main></main>
-        </div>
+            <header><h1>WEB 114: William's Final Project</h1></header>
+            <main>
+                <h2>Welcome!</h2>
+                <p>This is my final project for JCCC's WEB 114 Course, which utilizes many different parts of JavaScript to create a website.</p>
+                
+                <h3>Mathematical Functions</h3>
+                <p>For each of the forms below, you can enter two numbers and click the button to calculate the result!</p>
+                <div class="flow"> <!-- Math Div -->
+                    <form>
+                        <!-- Adding two numbers -->
+                        <h4>Adding</h4>
+                        <label>
+                            Enter a number.
+                            <input id="addNumOne" type="number">
+                        </label>
+                        <br>
+                        <label>
+                            Enter a number.
+                            <input id="addNumTwo" type="number">
+                        </label>
+                        <br>
+                        <label id="addNumResult" class="q_empty">Your result is:</label>
+                        <br>
+                        <input id="addButton" type="button" value="Add">
+                    </form>
+
+                    <form>
+                        <!-- Subtracting two numbers -->
+                        <h4>Subtracting</h4>
+                        <label>
+                            Enter a number.
+                            <input id="subNumOne" type="number">
+                        </label>
+                        <br>
+                        <label>
+                            Enter a number.
+                            <input id="subNumTwo" type="number">
+                        </label>
+                        <br>
+                        <label id="subNumResult" class="q_empty">Your result is:</label>
+                        <br>
+                        <input id="subButton" type="button" value="Subtract">
+                    </form>
+
+                    <form>
+                        <h4>Other Operations</h4>
+                        <!-- Multiply / Divide two numbers -->
+                        <label>We'll do this one a bit different. This time, select which operation you'd like to perform from the list below:</label>
+                        <div id="operatorList">
+                            <!-- Div for radio buttons -->
+                            <label><input type="radio" name="operation" value="*">Mulitply</label>
+                            <label><input type="radio" name="operation" value="/">Divide</label>
+                            <label><input type="radio" name="operation" value="%">Modulus</label>
+                            <label><input type="radio" name="operation" value="^">Power</label>
+                        </div> <!-- End of Radio Buttons Div -->
+                        <label>
+                            Enter a number.
+                            <input id="otherNumOne" type="number">
+                        </label>
+                        <br>
+                        <label>
+                            Enter a number.
+                            <input id="otherNumTwo" type="number">
+                        </label>
+                        <br>
+                        <label id="otherNumResult" class="q_empty">Your result is:</label>
+                        <br>
+                        <input id="otherButton" type="button" value="Calculate">
+                    </form>
+                </div> <!-- End of Math Div -->
+
+                <h3>Image Questions</h3>
+                <form>
+                    <h4>Boats</h4>
+                    <img src="images\boats.jpg">
+                    <br>
+                    <label>
+                        Look at the image above, how many boats are in this image?
+                        <input id="quest_boat" type="number">
+                    </label>
+                    <br>
+                    <label id="ans_boat" class="q_empty">Enter your guess and we'll give you feedback on your answer!</label>
+                </form>
+
+                <form>
+                    <h4>A Bird in a Tree</h4>
+                    <img src="images\bird.jpg">
+                    <br>
+                    <label>
+                        What color is the bird in this picture?
+                        <br>
+                        (Hint: You can be generic, red; blue; yellow; green; pink; all work fine!)
+                        <br>
+                        <input id="quest_bird_0">
+                    </label>
+                    <br>
+                    <label>
+                        What color are the leaves behind the bird?
+                        <br>
+                        <input id="quest_bird_1">
+                    </label>
+                    <br>
+                    <label id="ans_bird" class="q_empty">Enter your guesses!</label>
+                </form>
+
+                <div> <!-- Ending Div -->
+                    <p id="ans_check_result"></p>
+                    <input id="ans_check_button" type="button" value="Check my Answers!">
+                </div> <!-- End of Ending Div -->
+            </main>
+        </div> <!-- End of Wrapper Div -->
+        <script src="scripts\main.js"></script>
     </body>
 </html>
